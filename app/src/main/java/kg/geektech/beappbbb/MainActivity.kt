@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -20,11 +21,10 @@ import kg.geektech.beappbbb.base.BaseViewModel
 import kg.geektech.beappbbb.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
-    private lateinit var appBarConfiguration2: AppBarConfiguration
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
-    private lateinit var toolbar: Toolbar
+    private lateinit var navViewBottom: BottomNavigationView
 
 
     override val viewModel: BaseViewModel by lazy {
@@ -42,7 +42,7 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         //инициализация bottom navigation
-        val navViewBottom: BottomNavigationView = binding.contentMain.navView
+        navViewBottom = binding.contentMain.navView
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         val navController = navHostFragment.navController
@@ -70,16 +70,37 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
         //клики drawerLayout
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.nav_home -> {
-                    Toast.makeText(this, "My Profile", Toast.LENGTH_SHORT).show()
+                R.id.homeFragment -> {
+                    Toast.makeText(this, "Главная", Toast.LENGTH_SHORT).show()
+                    findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.homeFragment)
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.nav_account -> {
-                    Toast.makeText(this, "People", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Аккаунт", Toast.LENGTH_SHORT).show()
+                    findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.accountsFragment)
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
-                R.id.nav_records -> {
-                    Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show()
+                R.id.recordsFragment -> {
+                    Toast.makeText(this, "Мои записи", Toast.LENGTH_SHORT).show()
+                    findNavController(R.id.nav_host_fragment_activity_main).navigate(R.id.recordsFragment)
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+                R.id.nav_we -> {
+                    true
+                }
+                R.id.nav_language -> {
+                    true
+                }
+                R.id.nav_share -> {
+                    true
+                }
+                R.id.nav_business -> {
+                    true
+                }
+                R.id.nav_shield -> {
                     true
                 }
                 else -> {
@@ -87,6 +108,7 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
                 }
             }
         }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -99,8 +121,8 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
     }
 
 
-    // override the onBackPressed() function to close the Drawer when the back button is clicked
     override fun onBackPressed() {
+        // переопределить функцию onBackPressed(), чтобы закрыть ящик при нажатии кнопки «Назад»
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START)
         } else {

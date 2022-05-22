@@ -5,24 +5,24 @@
         android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
         android:enabled="true"
-        android:title="@string/title_home" />
+        android:title="@string/bt_nav_home" />
 
     <item
         android:id="@+id/recordsFragment"
         android:icon="@drawable/ic_records"
         android:enabled="true"
-        android:title="@string/title_records" />
+        android:title="@string/bt_nav_records" />
 
     <item
         android:id="@+id/salonsFragment"
         android:icon="@drawable/ic_salons"
         android:enabled="true"
-        android:title="@string/title_salons" />
+        android:title="@string/bt_nav_salons" />
 
     <item
         android:id="@+id/accountsFragment"
         android:icon="@drawable/ic_account"
         android:enabled="true"
-        android:title="@string/title_account" />
+        android:title="@string/bt_nav_account" />
 
 </menu>

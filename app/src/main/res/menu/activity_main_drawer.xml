@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/homeFragment"
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
         <item
@@ -13,7 +13,7 @@
             android:icon="@drawable/ic_account"
             android:title="@string/account2" />
         <item
-            android:id="@+id/nav_records"
+            android:id="@+id/recordsFragment"
             android:icon="@drawable/ic_records"
             android:title="@string/tittle_records" />
         <item

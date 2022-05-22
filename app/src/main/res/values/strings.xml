@@ -19,4 +19,8 @@
     <string name="business">BeApp для бизнеса</string>
     <string name="shield">Служба поддержки</string>
     <string name="enter">Войти</string>
+    <string name="bt_nav_home">Главная</string>
+    <string name="bt_nav_records">Запись</string>
+    <string name="bt_nav_salons">Салоны</string>
+    <string name="bt_nav_account">Аккаунт</string>
 </resources>
