@@ -1,8 +1,6 @@
 package kg.geektech.beappbbb
 
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
+import android.view.*
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -54,6 +52,7 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
                 R.id.homeFragment, R.id.recordsFragment, R.id.salonsFragment, R.id.accountsFragment
             )
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navViewBottom.setupWithNavController(navController)
 
@@ -64,6 +63,11 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         actionBarToggle.syncState()
         navView = binding.navViewMenu
+
+    }
+
+    override fun initListener() {
+        //клики drawerLayout
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
@@ -89,6 +93,11 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
         drawerLayout.openDrawer(navView)
         return true
     }
+
+    fun openDrawer() {
+        drawerLayout.open()
+    }
+
 
     // override the onBackPressed() function to close the Drawer when the back button is clicked
     override fun onBackPressed() {
