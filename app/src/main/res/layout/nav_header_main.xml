@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        android:textSize="16sp"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/roboto"
+        android:paddingTop="46dp"
+        android:paddingStart="24dp"
+        android:paddingBottom="24dp"
+         />
+
+</FrameLayout>

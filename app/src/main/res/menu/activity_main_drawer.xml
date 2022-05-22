@@ -20,6 +20,22 @@
             android:id="@+id/nav_we"
             android:icon="@drawable/ic_salons"
             android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_language"
+            android:icon="@drawable/ic_globe"
+            android:title="@string/language" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share" />
+        <item
+            android:id="@+id/nav_business"
+            android:icon="@drawable/ic_briefcase"
+            android:title="@string/business" />
+        <item
+            android:id="@+id/nav_shield"
+            android:icon="@drawable/ic_shield"
+            android:title="@string/shield" />
 
     </group>
 </menu>

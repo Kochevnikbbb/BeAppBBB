@@ -14,4 +14,9 @@
     <string name="home">Главная</string>
     <string name="account2">Аккаунт</string>
     <string name="about_us">О нас</string>
+    <string name="language">Язык</string>
+    <string name="share">Поделиться приложением</string>
+    <string name="business">BeApp для бизнеса</string>
+    <string name="shield">Служба поддержки</string>
+    <string name="enter">Войти</string>
 </resources>
