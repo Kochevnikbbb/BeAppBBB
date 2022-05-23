@@ -23,4 +23,6 @@
     <string name="bt_nav_records">Запись</string>
     <string name="bt_nav_salons">Салоны</string>
     <string name="bt_nav_account">Аккаунт</string>
+    <string name="bestyle">BeStyle</string>
+    <string name="streets">ул. Советская 152/3</string>
 </resources>
