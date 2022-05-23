@@ -59,7 +59,8 @@
         android:textSize="15sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="@id/ic_map"
-        app:layout_constraintTop_toTopOf="@id/ic_map" />
+        app:layout_constraintTop_toTopOf="@id/ic_map"
+        app:drawableLeftCompat="@drawable/ic_map_pin" />
 
     <ImageView
         android:id="@+id/ic_clock"

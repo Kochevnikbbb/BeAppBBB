@@ -26,6 +26,7 @@
         <item name="android:paddingStart">24dp</item>
         <item name="background">@color/transparent</item>
     </style>
+
     <style name="TextViewSize">
         <item name="android:fontFamily"> @font/roboto</item>
         <item name="android:textSize">15sp</item>
@@ -33,6 +34,21 @@
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Установите фон экрана-заставки, анимированный значок и продолжительность анимации. -->
+        <item name="windowSplashScreenBackground">@color/purple_splash_screen</item>
+
+        <!-- Используйте windowSplashScreenAnimatedIcon, чтобы добавить рисуемый или
+              анимированный рисунок. Требуется один из них. -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_be_app</item>
+        <!-- Требуется для анимированных иконок -->
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- Установите тему действия, которое следует непосредственно за заставкой.. -->
+        <!-- Необходимый -->
+        <item name="postSplashScreenTheme">@style/Theme.AppCompat.Light.NoActionBar</item>
     </style>
 
 </resources>

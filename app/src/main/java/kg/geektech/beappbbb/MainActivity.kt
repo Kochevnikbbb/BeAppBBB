@@ -1,9 +1,11 @@
 package kg.geektech.beappbbb
 
+import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,6 +27,11 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
     private lateinit var navViewBottom: BottomNavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
+        super.onCreate(savedInstanceState)
+    }
 
 
     override val viewModel: BaseViewModel by lazy {

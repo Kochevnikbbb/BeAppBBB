@@ -3,6 +3,7 @@ package kg.geektech.beappbbb.base
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivity() {
@@ -13,6 +14,7 @@ abstract class BaseActivity<VM: BaseViewModel,VB: ViewBinding> : AppCompatActivi
     protected abstract fun inflateViewBinding(inflater: LayoutInflater): VB
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         binding = inflateViewBinding(layoutInflater)
         setContentView(binding.root)
